@@ -20,6 +20,12 @@ function getVideo() {
 function paintToCanvas() {
     const width = video.videoWidth;
     const height = video.videoHeight;
-    console.log(width, height); // 640x 480
+    //console.log(width, height); // 640x 480
+    canvas.width = width;
+    canvas.height = height;
+
+    return setInterval(() => {
+        ctx.drawImage(video,0,0,width,height);
+    },16);
 }
 getVideo();
