@@ -1,4 +1,4 @@
-alert("js is linked"); 
+//alert("js is linked"); 
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
@@ -12,7 +12,14 @@ function getVideo() {
         //video.src = window.URL.createObjectURL(localMediaStream);
         video.srcObject = localMediaStream;
         video.play();
+    })
+    .catch(err => {
+        console.log(`OH NO!!`, err);
     });
 }
-
+function paintToCanvas() {
+    const width = video.videoWidth;
+    const height = video.videoHeight;
+    console.log(width, height); // 640x 480
+}
 getVideo();
