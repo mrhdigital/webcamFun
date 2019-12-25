@@ -34,3 +34,5 @@ function takephoto() {
     snap.play();
 }
 getVideo();
+
+video.addEventListener('canplay',paintToCanvas);
