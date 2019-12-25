@@ -29,7 +29,7 @@ function paintToCanvas() {
     },16);
 }
 
-function takephoto() {
+function takePhoto() {
     //played the sound
     snap.currentTime = 0;
     snap.play();
